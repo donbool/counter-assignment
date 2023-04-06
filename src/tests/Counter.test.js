@@ -12,18 +12,21 @@ beforeEach(() => {
 
 test('renders counter message', () => {
   // Complete the unit test below based on the objective in the line above
+  //done
   const message = document.querySelector("h2");
     expect(message.textContent).toBe("Counter");
 });
 
 test('should render initial count with value of 0', () => {
   // Complete the unit test below based on the objective in the line above
+  //done
   const count = document.querySelector('[data-testid="count"]');
     expect(count.textContent).toBe("0");
 });
 
 test('clicking + increments the count', () => {
   // Complete the unit test below based on the objective in the line above
+  //done
   const incrementButton = document.querySelector("button:nth-of-type(1)");
   const count = document.querySelector('[data-testid="count"]');
   fireEvent.click(incrementButton);
@@ -32,6 +35,7 @@ test('clicking + increments the count', () => {
 
 test('clicking - decrements the count', () => {
   // Complete the unit test below based on the objective in the line above
+  //done
   const decrementButton = document.querySelector("button:nth-of-type(2)");
   const count = document.querySelector('[data-testid="count"]');
   fireEvent.click(decrementButton);
