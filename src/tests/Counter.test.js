@@ -2,7 +2,8 @@
 // import the Counter component here
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import Counter from "./Counter";
+import userEvent from "@testing-library/user-event";
+import Counter from "../components/Counter";
 
 beforeEach(() => {
   // Render the Counter component here
@@ -23,16 +24,16 @@ test('should render initial count with value of 0', () => {
 
 test('clicking + increments the count', () => {
   // Complete the unit test below based on the objective in the line above
-  const incrementButton = document.querySelector('button[onclick="increment()"]');
-    const count = document.querySelector('[data-testid="count"]');
-    fireEvent.click(incrementButton);
-    expect(count.textContent).toBe("1");
+  const incrementButton = document.querySelector("button:nth-of-type(1)");
+  const count = document.querySelector('[data-testid="count"]');
+  fireEvent.click(incrementButton);
+  expect(count.textContent).toBe("1");
 });
 
 test('clicking - decrements the count', () => {
   // Complete the unit test below based on the objective in the line above
-  const decrementButton = document.querySelector('button[onclick="decrement()"]');
-    const count = document.querySelector('[data-testid="count"]');
-    fireEvent.click(decrementButton);
-    expect(count.textContent).toBe("-1");
+  const decrementButton = document.querySelector("button:nth-of-type(2)");
+  const count = document.querySelector('[data-testid="count"]');
+  fireEvent.click(decrementButton);
+  expect(count.textContent).toBe("-1");
 });
